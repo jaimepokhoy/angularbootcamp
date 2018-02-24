@@ -1,0 +1,7 @@
+<div class="list-group">
+  <a (click)="toggle(item)" *ngFor="let item of tasks" [ngClass]="{'complete': item.complete }" href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+    {{item.name}}
+    <span class="badge badge-primary badge-pill">{{item.numTasks}}</span>
+  </a>
+</div>
+<button routerLink="/create" class="btn btn-success">New Task</button>
