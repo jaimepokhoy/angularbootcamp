@@ -10,7 +10,8 @@ const httpOptions = {
 @Injectable()
 export class ListService {
   lists: any[] = [];
-  private url = 'http://localhost:3000/api';
+  // private url = 'http://localhost:3000/api';
+  private url = 'https://ang-bootcamp.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
