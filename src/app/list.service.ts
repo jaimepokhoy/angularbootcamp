@@ -24,6 +24,6 @@ export class ListService {
   }
 
   addTask(task) {
-    return this.http.post(`${this.url}/tasks`, task).subscribe();
+    return this.http.post(`${this.url}/tasks`, task);
   }
 }

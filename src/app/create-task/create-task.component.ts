@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ListService } from '../list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-task',
@@ -10,7 +11,7 @@ import { ListService } from '../list.service';
 export class CreateTaskComponent implements OnInit {
   taskForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private listService: ListService) {
+  constructor(private fb: FormBuilder, private listService: ListService, private router: Router) {
     this.createForm();
   }
 
@@ -26,10 +27,10 @@ export class CreateTaskComponent implements OnInit {
 
   onSubmit() {
     const formModel = this.taskForm.value;
-    console.log(formModel);
 
-    this.listService.addTask(formModel);
-
+    this.listService.addTask(formModel).subscribe(() => {
+      this.router.navigate(['/']);
+    });
   }
 
 }
