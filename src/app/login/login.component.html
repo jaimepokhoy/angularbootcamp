@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="form-group col-md-5">
+    <label for="account">Account:</label>
+    <input type="text" id ="account"  name="account" #account>
+  </div>
+  <div class="form-group col-md-5">
+    <label for="password">Password:</label>
+    <input type="password" id="password"  name="password" #password>
+  </div>
+  <button class="btn btn-primary" (click)="tryLogin(account.value,password.value)">Login</button>
+</div>

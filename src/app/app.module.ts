@@ -11,8 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateTaskComponent } from './create-task/create-task.component';
 
 import { ListService } from './list.service';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
+  {path: 'login', component: LoginComponent},
   { path: 'create', component: CreateTaskComponent },
   { path: '', component: ListComponent }
 ];
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListComponent,
-    CreateTaskComponent
+    CreateTaskComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(
