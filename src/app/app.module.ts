@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { ListComponent } from './list/list.component';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
       appRoutes
     ),
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule

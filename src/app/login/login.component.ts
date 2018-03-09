@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Accounts } from './mock-accounts';
 import { Account } from './account';
 
 @Component({
@@ -8,12 +7,12 @@ import { Account } from './account';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { 
-    
-  }
+  message='';
+  login: Account={account:'',password:''}; 
+  constructor() {}
 
   ngOnInit() {
+     
   }
 
 }

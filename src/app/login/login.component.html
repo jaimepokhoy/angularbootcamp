@@ -1,11 +1,12 @@
 <div class="container">
   <div class="form-group col-md-5">
     <label for="account">Account:</label>
-    <input type="text" id ="account"  name="account" #account>
+    <input type="text" [(ngModel)]="login.account">
   </div>
   <div class="form-group col-md-5">
     <label for="password">Password:</label>
-    <input type="password" id="password"  name="password" #password>
+    <input type="password" [(ngModel)]="login.password">
   </div>
-  <button class="btn btn-primary" (click)="tryLogin(account.value,password.value)">Login</button>
+  <button class="btn btn-primary" (click)="tryLogin()">Login</button>
+  <p>{{message}}</p>
 </div>
