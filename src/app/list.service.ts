@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { Task } from './list/task';
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -15,7 +16,7 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
-  toggleTask(task) {
+  toggleTask(task: Task) {
     this.http.post(`${this.url}/toggle`, { taskId: task.id }).subscribe();
   }
 
@@ -23,7 +24,7 @@ export class ListService {
     return this.http.get(`${this.url}/tasks`);
   }
 
-  addTask(task) {
+  addTask(task: Task) {
     return this.http.post(`${this.url}/tasks`, task);
   }
 }
