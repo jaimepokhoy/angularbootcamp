@@ -7,12 +7,11 @@ import { Account } from './account';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  message='';
-  login: Account={account:'',password:''}; 
+  message = '';
+  login: Account = { account: '', password: ''};
   constructor() {}
 
   ngOnInit() {
-     
   }
 
 }
