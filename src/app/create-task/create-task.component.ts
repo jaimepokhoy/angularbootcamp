@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class CreateTaskComponent implements OnInit {
 
+  categories = ['Personal', 'Work'];
+  model: any = {};
+
   constructor( private listService: ListService, private router: Router) {
   }
 
@@ -16,6 +19,9 @@ export class CreateTaskComponent implements OnInit {
   }
 
   onSubmit() {
+    this.listService.addTask(this.model).subscribe(() => {
+      this.router.navigate(['/']);
+    });
   }
 
 }

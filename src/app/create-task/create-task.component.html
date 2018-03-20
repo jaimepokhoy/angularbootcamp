@@ -1,1 +1,20 @@
+<div class="container">
 <h3>Create Task</h3>
+
+<form #taskForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Task</label>
+    <input #task="ngModel" type="text" class="form-control" id="task" name="task" placeholder="Enter a Task" [(ngModel)]="model.task" required>
+    <div [hidden]="task.valid || task.pristine" class="alert alert-danger">Task name is required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" id="category" name="category" [(ngModel)]="model.category">
+      <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+    </select>
+  </div>
+
+  <button [disabled]="taskForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
