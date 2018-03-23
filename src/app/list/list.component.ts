@@ -12,14 +12,11 @@ export class ListComponent implements OnInit {
   tasks: Task[];
 
   ngOnInit() {
-    this.listService.getTasks().subscribe((tasks: Task[]) => {
-      this.tasks = tasks;
-    });
+
   }
 
   toggle(task) {
-    this.listService.toggleTask(task);
-    task.complete = !task.complete;
+
   }
 
 }

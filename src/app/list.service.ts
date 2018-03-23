@@ -10,21 +10,16 @@ const httpOptions = {
 
 @Injectable()
 export class ListService {
-  lists: any[] = [];
-  // private url = 'http://localhost:3000/api';
   private url = 'https://ang-bootcamp.herokuapp.com/api';
 
   constructor(private http: HttpClient) { }
 
   toggleTask(task: Task) {
-    this.http.post(`${this.url}/toggle`, { taskId: task.id }).subscribe();
   }
 
   getTasks() {
-    return this.http.get(`${this.url}/tasks`);
   }
 
   addTask(task: Task) {
-    return this.http.post(`${this.url}/tasks`, task);
   }
 }

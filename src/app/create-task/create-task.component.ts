@@ -19,9 +19,7 @@ export class CreateTaskComponent implements OnInit {
   }
 
   onSubmit() {
-    this.listService.addTask(this.model).subscribe(() => {
-      this.router.navigate(['/']);
-    });
+    this.router.navigate(['/']);
   }
 
 }
