@@ -14,6 +14,7 @@ import { CreateTaskComponent } from './create-task/create-task.component';
 import { ListService } from './list.service';
 import { LoginComponent } from './login/login.component';
 import { StrikeDirective } from './strike/strike.directive';
+import { TasksFilterPipe } from './tasks-filter/tasks-filter.pipe';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     ListComponent,
     CreateTaskComponent,
     LoginComponent,
-    StrikeDirective
+    StrikeDirective,
+    TasksFilterPipe
   ],
   imports: [
     RouterModule.forRoot(

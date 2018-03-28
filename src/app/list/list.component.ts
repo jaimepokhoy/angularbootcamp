@@ -8,8 +8,9 @@ import { Task } from './task';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  constructor(private listService: ListService) { }
-  tasks: Task[];
+  constructor(private listService: ListService) {}
+  tasks: Task[] = [];
+  category: String = '';
 
   ngOnInit() {
     this.listService.getTasks().subscribe((tasks: Task[]) => {
@@ -22,4 +23,7 @@ export class ListComponent implements OnInit {
     task.complete = !task.complete;
   }
 
+  setCategory(category) {
+    this.category = category;
+  }
 }
