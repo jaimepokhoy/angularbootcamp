@@ -13,6 +13,7 @@ import { CreateTaskComponent } from './create-task/create-task.component';
 
 import { ListService } from './list.service';
 import { LoginComponent } from './login/login.component';
+import { StrikeDirective } from './strike/strike.directive';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     AppComponent,
     ListComponent,
     CreateTaskComponent,
-    LoginComponent
+    LoginComponent,
+    StrikeDirective
   ],
   imports: [
     RouterModule.forRoot(
