@@ -1,5 +1,5 @@
 <h2>Current Tasks</h2>
 <div class="list-group">
-  <app-todo-item (click)="toggle(task)" *ngFor="let task of tasks" [task]="task"></app-todo-item>
+  <app-todo-item (toggle)="toggle(task)" *ngFor="let task of tasks" [task]="task"></app-todo-item>
 </div>
 <button routerLink="/create" class="btn btn-success">New Task</button>
