@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../list/task';
 
 @Component({
@@ -8,10 +8,15 @@ import { Task } from '../list/task';
 })
 export class TodoItemComponent implements OnInit {
   @Input() task: Task;
+  @Output() toggle = new EventEmitter<Task>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onToggle() {
+    this.toggle.emit(this.task);
   }
 
 }
