@@ -15,9 +15,10 @@ import { ListService } from './list.service';
 import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent},
+  
   { path: 'create', component: CreateTaskComponent },
-  { path: '', component: ListComponent }
+  { path: 'list', component: ListComponent },
+  {path: '', component: LoginComponent}
 ];
 
 @NgModule({
